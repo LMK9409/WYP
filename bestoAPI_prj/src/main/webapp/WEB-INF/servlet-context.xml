@@ -18,7 +18,8 @@
 	
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
-	<context:component-scan base-package="com.biz.**" />
+	<context:component-scan base-package="com.biz.**" />  
+	<!-- vvvv안바꾸면 병신 흑우새끼 -->
  <!-- html 다이렉트 접근 위한 설정 추가 .. -->
 	 
 
@@ -31,7 +32,7 @@
 	</tx:advice>
 	<aop:config>
 		<!-- where -->
-		<aop:pointcut id="cut" expression="execution(* com.biz..*Impl.*(..))"/>
+		<aop:pointcut id="cut" expression="execution(* com.biz..*Impl.*(..))"/>  <!-- sss안바꾸면 병신 흑우새끼sss -->
 		<!-- when + what -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="cut" />
 	</aop:config>
@@ -51,9 +52,4 @@
 	</bean>
 	
 	
-	
-	
-	
-	
-		
 </beans>
