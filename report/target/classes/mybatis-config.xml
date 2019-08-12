@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="xcan">
+        <environment id="xcan">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver" />
+                <property name="url" value="jdbc:postgresql://52.193.206.71:5432/pmsdb" />
+                <property name="username" value="postgres" />
+                <property name="password" value="aispostgres" />
+				<property name="poolPingEnabled" value="true" />
+	           <property name="driver.encoding" value="UTF-8"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="jp.co.info.ais.report.model" />
+        <package name="jp.co.info.ais.report.mapper" />
+    </mappers>
+</configuration>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<classPathEntry  location="D:\postgresql-42.2.5.jar" />
+	<context id="context1">
+		<jdbcConnection
+			connectionURL="jdbc:postgresql://52.193.206.71:5432/pmsdb"
+			driverClass="org.postgresql.Driver" password="aispostgres" userId="postgres" />
+		<javaModelGenerator
+			targetPackage="jp.co.info.ais.report.model" targetProject="report" />
+		<sqlMapGenerator
+			targetPackage="jp.co.info.ais.report.mapper" targetProject="report" />
+		<javaClientGenerator
+			targetPackage="jp.co.info.ais.report.mapper" targetProject="report"
+			type="XMLMAPPER" />
+		<table schema="public" tableName="m_user" />
+		<table schema="public" tableName="m_work_report" />
+	</context>
+</generatorConfiguration>
